@@ -1,0 +1,177 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background: #0000ff; */
+    color: white;
+    padding: 10px 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,.1);
+    color: #000;
+    user-select: none;
+    background-color: #fff;
+    z-index: 2000;
+    position: fixed;
+    width: 100%;
+    /* border: 1px solid red; */
+
+    /* display: block; */
+
+
+}
+nav{
+    float: left;
+
+}
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li{
+    float: left;
+    font-size: 20px;
+    position: relative;
+}
+header .navbar ul li a{
+    color: #000;
+    padding: 12px;
+    display: block;
+    text-transform: capitalize;
+}
+
+header .navbar ul li a:hover{
+    background: #333;
+    color: #fff;
+
+}
+header .navbar ul li ul{
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    width: 90px;
+
+}
+label{
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+    
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+section {
+  
+  width: 100vw;
+  height: 100vh;
+  background-image: url(coverPic.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#bar-slash{
+    display: none;
+}
+@media screen  and (max-width:480px) {
+    header{
+        width: 250px;
+        height: 100vh;
+        display: none;
+        /* left: 250px; */
+        position: fixed;
+        z-index: 1;
+        transition: all .5s ease;
+        /* border: 1px solid red; */
+
+
+    }
+    header nav{
+         display: block; 
+         /* display: none; */
+         margin-top: 20px;
+         border: 1px solid red;
+    }
+    header span{
+        position: relative;
+        top: 0;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        /* border: 1px solid red; */
+    }
+    #bar-slash{
+        display: initial;
+        z-index: 1;
+        color: #fff;
+        width: 80px;
+        height: 80px;
+        /* border: 1px solid red; */
+        position: relative;
+        left: 10px;
+        top: 10px;
+        font-size: 1.9rem;
+        transition: all .5s;
+    }
+    header .navbar ul li{
+        position: relative;
+        width: 100%;
+        /* border: 1px solid red; */
+        padding: 10px 10px 0 0;
+
+    }
+    #cancel{
+        display: block;
+        position: absolute;
+        z-index: 1111;
+        left: -220px;
+        top: 5px;
+        font-size: 1.9rem;
+        transition: all .5s ease;
+    }
+    label{
+        display: initial;
+    }
+    /* #up{
+        left:
+    } */
+    
+    
+    input{
+        border: 1px solid red;
+        z-index: 10;
+    }
+    #check:checked ~ header{
+         /* left: 250px; */
+        left: 0 ;
+    }
+      
+    #check:checked ~ label  #bar-slash {
+        left: -250px;
+
+        pointer-events: none;
+
+    }
+    #check:checked ~ label  #cancel{
+        left:220px
+    }
+    label #bar-slash, #cancel{
+        position: absolute;
+        cursor: pointer;
+        /* background: #042331 ; */
+        border-radius: 7px;
+    
+    }
+    #check{
+        background-color: transparent;
+        border: 1px solid red;
+    }
+    /* section{
+        width: 100%;
+        height: 1000px;
+    } */
+    
+    
+}

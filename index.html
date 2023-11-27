@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fontsz/css/all.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="up">
+
+        <span>HEAVENSGATE</span>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="#">office</a>
+                <ul>
+                    <li><a href="#">branch1</a></li>
+                    <li><a href="#">branch1</a></li>
+                </ul>
+            </li>
+            <li><a href="#">services</a></li>
+            <li><a href="#">about</a></li>
+
+        </ul>
+    </nav>
+    </header>
+    <section>
+        <input type="checkbox" id="check" style="opacity: 0;">
+        <label for="check">menu
+        <i class="fa-solid fa-bars" id="bar-slash"></i>
+        <i class="fas fa-times" id="cancel" ></i>
+
+         </label>
+    </section>
+    <script>
+    //     document.getElementsByClassName("up").style.display="none";
+    //    function func(){
+    //    document.getElementsById("up").style.display='block';
+        
+    //    }
+    var btn =document.getElementById("cancel");
+    btn.onclick=function(){
+        document.getElementById("up").style.display="none";
+    }
+    var bar_slah = document.getElementById("bar-slash");
+    bar_slah.onclick=function(){
+        document.getElementById("up").style.display="block";
+        
+    }
+    </script>
+</body>
+</html>
